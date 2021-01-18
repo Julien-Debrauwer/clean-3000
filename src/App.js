@@ -24,11 +24,13 @@ export default class App extends Component {
     return (
       <div>
         <Header/>
-        <div className="container">
-          <div className="tiles-wrapper">
-            {actionCardsList}
+        <main>
+          <div className="container">
+            <div className="tiles-wrapper">
+              {actionCardsList}
+            </div>
           </div>
-        </div>
+        </main>
       </div>
     );
   }

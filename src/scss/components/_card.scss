@@ -1,8 +1,12 @@
 .card{
-    padding: 1rem 3rem;
+    padding: 3rem;
     text-align: center;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border: 1px solid;
+    color: $grey-dark;
+    border: 2px solid $grey-dark;
     cursor: pointer;
+    margin: 4rem 0;
+
+    &-group{
+        margin-bottom: 3rem;
+    }
 }

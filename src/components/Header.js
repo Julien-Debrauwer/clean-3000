@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-const Header = ({ history, isHome = false }) => {
-    
-    const goToHome = () => {
-        history.push(`/`);
-    }
+const Header = () => {
     
     return (
         <header>

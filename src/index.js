@@ -7,6 +7,7 @@ import 'antd/dist/antd.css';
 import './index.css';
 import App from './App';
 import NewCard from './components/NewCard';
+import Resume from './components/Resume';
 import reportWebVitals from './reportWebVitals';
 
 import {
@@ -27,7 +28,7 @@ const Root = () => (
       <Switch>
           <Route exact path='/' component={App} />
           <Route path='/newCard' component={NewCard} />
-          {/* <Route path='/order/:oid' component={Order} /> */}
+          <Route path='/resume' component={Resume} />
           {/* <Route component={NotFound} /> */}
       </Switch>
   </Router>

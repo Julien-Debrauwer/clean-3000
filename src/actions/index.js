@@ -1,11 +1,21 @@
-import { ADD_CARD } from './types';
+import { ADD_VISIT } from './types';
 
-export const addCard = id => ({
-    type: ADD_CARD,
+
+// export const checkName = name => ({
+//     type: ADDORACCESS_CUSTOMER,
+//     payload: {
+//         id: Date.now(),
+//         name,
+//         visits: []
+//     }
+// });
+
+export const addVisit = (name, obs) => ({
+    type: ADD_VISIT,
     payload: {
-        id,
-        pizzas: {},
-        total: 0,
-        paid: false
+        id: Date.now(),
+        name,
+        date: new Date(),
+        obs
     }
 });
