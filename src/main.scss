@@ -1,0 +1,18 @@
+@import "scss/vendors/normalize";
+
+@import "scss/abstracts/mixins",
+        "scss/abstracts/variables";
+
+
+@import "scss/base/base",
+        "scss/base/reset",
+        "scss/base/typography";
+        
+
+@import "scss/layout/layout",
+        "scss/layout/header";
+
+@import "scss/components/card";
+        
+@import "scss/themes/theme";
+

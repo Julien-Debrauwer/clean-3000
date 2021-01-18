@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import actionCards from './actionCards';
+import Header from './components/Header'
+import Card from './components/Card'
+import './main.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default class App extends Component {
+  handleClick(action) {
+    this.props.history.push(action);
+  }
+
+  render() {
+    const actionCardsList = actionCards.map(card => (
+      // pour le onClick ne pas oublier la fonction fléchée sinon la fonction associée au onClick s'éxécute immédiatement
+      <Card
+        key={card.action}
+        name={card.name}
+        description={card.description}
+        bgColor={card.bgColor}
+        action={() => this.handleClick(card.action)} />
+    ));
+
+    return (
+      <div className="container">
+        <Header history={this.props.history} isHome={true} />
+
+        <div className="tiles-wrapper">
+          {actionCardsList}
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;

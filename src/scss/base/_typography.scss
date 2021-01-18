@@ -1,0 +1,24 @@
+// PROJECT FONTS
+// __________________________________________________________
+
+// Import fonts url here (except font face, do it in font.scss)
+// __________________________________________________________
+
+// Typographic rules here
+// __________________________________________________________
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+	font-size: 1.8rem;
+    line-height: 1.5;
+    color: grey-dark;
+}
+
+.title{
+	margin-bottom: 1.8rem;
+}

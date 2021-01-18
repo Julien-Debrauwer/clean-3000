@@ -1,0 +1,50 @@
+// PROJECT MIXINS
+// ________________________________________________________________________________________
+
+
+// Create a box
+// ________________________________________________________________________________________
+
+@mixin box($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+
+// Create a pseudo element base structure 
+// ________________________________________________________________________________________
+
+@mixin pseudo-el($display: block, $position: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $position;
+    // @include pseudo-el() on ::before & ::after.
+}
+
+
+
+// Background color classes
+// ________________________________________________________________________________________
+
+$colors : tomato, coral, lightseagreen;
+
+@each $color in $colors {
+    .bg-#{$color}{
+        background-color: $color;
+    }
+}
+
+
+// Order cards
+// ________________________________________________________________________________________
+
+@mixin order-card($color, $border-color){
+    background-color: $color;
+    border-radius: 1rem;
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid $border-color;
+    min-height: 100%;
+}
