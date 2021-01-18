@@ -22,11 +22,12 @@ export default class App extends Component {
     ));
 
     return (
-      <div className="container">
-        <Header history={this.props.history} isHome={true} />
-
-        <div className="tiles-wrapper">
-          {actionCardsList}
+      <div>
+        <Header/>
+        <div className="container">
+          <div className="tiles-wrapper">
+            {actionCardsList}
+          </div>
         </div>
       </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 const Header = ({ history, isHome = false }) => {
     
     const goToHome = () => {
@@ -7,10 +7,13 @@ const Header = ({ history, isHome = false }) => {
     }
     
     return (
-        <header className="App-header">
-            { !isHome ? <button className="back-button" onClick={() => goToHome()} >Retour</button> : "" }
-            <div className="title-wrapper">
-                <h1>Clean 3000</h1>
+        <header>
+            <div className="container">
+                <nav>
+                    <Link to="/">
+                        <img className="logo" src={`${process.env.PUBLIC_URL}/img/logo-clean3000-transparent.png`} alt="Logo de Clean 3000" />
+                    </Link>
+                </nav>
             </div>
         </header>
     )
